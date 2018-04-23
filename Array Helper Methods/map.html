@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	var images = [
+
+	  { height: '34px', width: '39px' },
+	  { height: '54px', width: '19px' },
+	  { height: '83px', width: '75px' },
+	];
+
+	var heights = images.map(function(image) {
+
+		return (image.height);
+	});
+
+//============================================================================
+
+	var trips = [
+
+  		{ distance: 34, time: 10 },
+  		{ distance: 90, time: 50 },
+  		{ distance: 59, time: 25 }
+	];
+
+	var speeds = trips.map(function(speed) {
+
+		return (speed.distance / speed.time);
+	});
+
+//============================================================================
+
+	var paints = [
+
+	{ 
+		color: 'red' 
+	}, 
+	{ 
+		color: 'blue' 
+	}, 
+	{ 
+		color: 'yellow' 
+	}];
+ 
+	function pluck(array, property) {
+
+    	let colors = [];
+
+    	array.map(function(color) {
+
+        	colors.push(color[property]);
+    	});
+
+    	return colors;
+	}
+
+	pluck(paints, 'color');
+
+	</script>
+</body>
+</html>
