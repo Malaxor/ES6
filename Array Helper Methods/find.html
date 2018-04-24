@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	var users = [
+
+	  { id: 1, admin: false },
+	  { id: 2, admin: false },
+	  { id: 3, admin: true }
+	];
+
+	var admin = users.find((user)  => {
+
+		return user.admin;
+	});
+
+//============================================================================
+
+	var accounts = [
+
+	  { balance: -10 },
+	  { balance: 12 },
+	  { balance: 0 }
+	];
+
+	var account = accounts.find((account) => {
+
+		return account.balance === 12;
+	});
+
+//============================================================================
+
+	var arrays = [
+	    {
+	    	height: '20 feet', 
+	    	type: 'ladder'
+	    },
+	    {
+	    	height: '30 feet', 
+	    	type: 'ladder'
+	    }
+	];
+	    
+	function findWhere(array, criteria) {
+
+	  return array.find(item => item.height === criteria.height);
+	};
+
+	findWhere(arrays, {height: '20 feet'});
+
+	</script>
+</body>
+</html>
