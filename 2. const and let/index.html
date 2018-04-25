@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>const/let</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	const name = 'Phil';
+	const DOB = "03/04/1983";
+	let age = 35;
+
+//============================================================================
+
+	const statuses = [ 
+
+	  { code: 'OK', response: 'Request successful' },
+	  { code: 'FAILED', response: 'There was an error with your request' },
+	  { code: 'PENDING', response: 'Your reqeust is still pending' }
+	];
+
+	let message = '';
+	let currentCode = 'OK';
+
+	for (let i = 0; i < statuses.length; i++) {
+
+	  if (statuses[i].code === currentCode) {
+	  	
+	    message = statuses[i].response;
+	  }
+	}
+ 
+	</script>
+</body>
+</html>
