@@ -17,10 +17,10 @@
 	      { id: 105, title: 'The Brightest Ruby' }
 	    ];
 
-	    posts.forEach(function(post) {
+	    posts.forEach(post => 
 
 	    	savePost(post);
-	    });
+	    );
 	}
 
 //============================================================================
@@ -34,10 +34,10 @@
 
 	var areas = [];
 
-	images.forEach(function(image) {
+	images.forEach(image =>
 
 		areas.push(image.height * image.width);
-	});
+	);
 	console.log(areas);
 
 	</script>
