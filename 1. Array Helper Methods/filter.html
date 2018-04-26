@@ -10,10 +10,10 @@
 		
 	var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
 
-	var filteredNumbers = numbers.filter(function(number) {
+	var filteredNumbers = numbers.filter(number =>
 
-		return number > 50;
-	});
+		number > 50
+	);
 
 //============================================================================
 
@@ -26,10 +26,10 @@
 	 { id: 5, admin: true },
 	];
 
-	var filteredUsers = users.filter((user) => {
+	var filteredUsers = users.filter(user => 
 
-		return user.admin;
-	});
+		user.admin
+	);
 
 //============================================================================
 
@@ -42,10 +42,10 @@
 
 	function reject(array, iteratorFunction) {
 
-	  	return array.filter((item) => {
+	  	return array.filter(item => 
 
-	        return !iteratorFunction(item);
-	    });
+	        !iteratorFunction(item)
+	    );
 	}
 
 	reject(numbers, lessThanFifteen);  

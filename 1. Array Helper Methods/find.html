@@ -15,10 +15,10 @@
 	  { id: 3, admin: true }
 	];
 
-	var admin = users.find((user)  => {
+	var admin = users.find(user => 
 
-		return user.admin;
-	});
+		user.admin
+	);
 
 //============================================================================
 
@@ -29,10 +29,10 @@
 	  { balance: 0 }
 	];
 
-	var account = accounts.find((account) => {
+	var account = accounts.find(account => 
 
-		return account.balance === 12;
-	});
+		account.balance === 12
+	);
 
 //============================================================================
 
