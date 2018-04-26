@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rest and Spread Operator</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	function product(...numbers) {
+	  
+	  return numbers.reduce((acc, number) => {
+
+	    return acc * number;
+	   },1)
+	}
+
+	product(2,3);
+
+//============================================================================
+
+	const join = (array1, array2) => [...array1, ...array2];
+
+	join(['green', 'blue'], ['yellow', 'black']); 
+
+//============================================================================
+
+	const unshift = (array, ...numbers) => numbers.concat(array);
+
+
+
+
+
+	</script>
+</body>
+</html>

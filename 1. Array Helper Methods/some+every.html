@@ -29,10 +29,10 @@
 	  { url: '/users', status: 'failed' }
 	];
 
-	var inProgress = requests.some((request) => {
+	var inProgress = requests.some(request => 
 
-		return request.status === 'pending';
-	});
+		request.status === 'pending'
+	);
 
 //============================================================================
 
