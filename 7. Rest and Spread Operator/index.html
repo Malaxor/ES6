@@ -8,6 +8,7 @@
 
 	<script type="text/javascript">
 		
+	// rest operator	
 	function product(...numbers) {
 	  
 	  return numbers.reduce((acc, number) => {
@@ -20,12 +21,13 @@
 
 //============================================================================
 
+	// spread operator
 	const join = (array1, array2) => [...array1, ...array2];
 
 	join(['green', 'blue'], ['yellow', 'black']); 
 
 //============================================================================
-
+	// rest operator
 	const unshift = (array, ...numbers) => numbers.concat(array);
 
 
