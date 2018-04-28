@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classes</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	class Monster {
+
+	  constructor({ name, health = 100 }) {
+
+	  	this.name = name;
+	  	this.health = health;
+	  }
+	}
+	const monster = new Monster({ name: 'Phil' });
+
+//============================================================================
+
+	class Monster {
+
+	  constructor(options) {
+	  	
+	    this.health = 100;
+	    this.name = options.name;
+	  }
+	}
+
+	class Snake extends Monster {
+
+		constructor(options) {
+			super(options);
+		}
+
+	    bite(snake){
+	        snake.health -= 10
+	    }
+	}
+
+	const evilSnake = new Snake({ name: 'Evil Snake' });
+	const goodSnake = new Snake({ name: 'Good Snake' });
+
+	evilSnake.bite(goodSnake);
+
+
+
+//============================================================================
+
+
+	</script>
+</body>
+</html>
