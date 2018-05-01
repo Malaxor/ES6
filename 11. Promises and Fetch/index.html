@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promises/Fetch</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	promise = new Promise((resolve, reject) => {
+
+		setTimeout(() => {
+
+			resolve();
+		}, 3000);
+	});
+
+	promise
+	.then(() => console.log('finally finished!'))
+	.then(() => console.log('i was also ran...'))
+	.catch(() => console.log('i had a bad feeling about that'));
+
+//============================================================================
+
+	url = "https://jsonplaceholder.typicode.com/posts/";
+	fetch(url)
+	  .then(response => response.json())
+	  .then(data => console.log(data));
+
+//============================================================================
+
+	url = "https://jsonplaceholder123.typicode.com/posts/";
+	fetch(url)
+	  .then(response => console.log(response))
+	  .catch(data => console.log('BAD', data));
+
+
+	</script>
+</body>
+</html>
